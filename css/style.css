@@ -50,12 +50,90 @@ h1, h2, h3, h4, h5, h6, p, ul {
   background-color: #C81059;
   border-radius: 5px;
   outline: none;
-  border: none;
+  border: 1px solid #C81059;
   color: #fff;
   width: fit-content;
   font-family: "Cera-Light ", sans-serif;
   font-size: 14px;
   text-align: center;
+  transition: background-color .3s;
+  cursor: pointer;
+}
+
+.button-blue {
+  padding: 12px 61.5px;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  width: fit-content;
+  font-family: "Cera-Light ", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color .3s;
+  border: 1px solid #0099C8;
+  background-color: #0099C8;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 23px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(45, 45, 45, 0.1);
+  border-radius: 2px;
+  background-color: #ffffff;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-color: #0099C8;
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before {
+  border-radius: 2px;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+  left: 5px;
+  top: 5px;
+  width: 12px;
+  height: 10px;
+  background-image: url("../img/v-mark.svg");
+}
+
+input[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after {
+  opacity: 1;
 }
 
 .header {
@@ -109,6 +187,113 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .hero__img {
   width: 436px;
   height: 314px;
+}
+
+.prices {
+  padding: 55px 0;
+}
+
+.prices-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.prices__title {
+  font-family: "Cera-Bold", sans-serif;
+  font-size: 28px;
+  line-height: 150%;
+}
+
+.prices-card {
+  padding: 30px;
+  margin: 33px 0;
+  max-width: 350px;
+  height: 480px;
+  border-radius: 10px;
+  box-shadow: 0px 12px 25px rgba(90, 90, 90, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.prices-card__title {
+  font-family: "Cera-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  color: #000;
+}
+
+.prices-card__subtitle {
+  font-family: "Open Sans", sans-serif;
+  color: #ACACAC;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.prices-card__speed {
+  font-family: "Cera-Medium", sans-serif;
+  color: #C81059;
+  font-size: 25px;
+  line-height: 150%;
+}
+
+.prices-card__description {
+  font-family: "Open Sans", sans-serif;
+  color: #555555;
+  font-size: 13px;
+  line-height: 150%;
+}
+
+.prices-card-checkbox {
+  font-family: "Cera-Light ", sans-serif;
+  color: #555555;
+  font-size: 14px;
+  line-height: 150%;
+  z-index: 999;
+}
+
+.prices-card-prices {
+  display: flex;
+  align-items: center;
+}
+
+.prices-card__price {
+  font-family: "Cera-Bold", sans-serif;
+  color: #2D2D2D;
+  font-size: 40px;
+  line-height: 150%;
+  margin-right: 10px;
+}
+
+.prices-card__period {
+  font-family: "Open Sans", sans-serif;
+  color: #ACACAC;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.prices-card__star {
+  font-family: "Open Sans", sans-serif;
+  color: #ACACAC;
+  font-size: 12px;
+  line-height: 150%;
+}
+
+.prices-card__button {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .button:hover {
+    background-color: #fff;
+    color: #C81059;
+    border: 1px solid #C81059;
+  }
+  .button-blue:hover {
+    background-color: #fff;
+    color: #0099C8;
+    border: 1px solid #0099C8;
+  }
 }
 
 @media (max-width: 1200px) {

@@ -5,10 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <title>Main page</title>
+  <title>К-Телеком</title>
 </head>
 
 <body>
@@ -44,7 +48,66 @@
       <!-- /.container -->
     </section>
     <!-- /.hero -->
+    <section class="prices">
+      <div class="container prices-container">
+        <h2 class="prices__title">Тарифные планы</h2>
+        <div class="owl-carousel">
+          <div class="prices-card">
+            <h3 class="prices-card__title">Мой клик</h3>
+            <span class="prices-card__subtitle">Скорость интернета</span>
+            <span class="prices-card__speed">до 40 Мбит/с</span>
+            <p class="prices-card__description">Отличный вариант для пенсионеров, выполнения определенных задач и работе
+              с файлами различных размеров.</p>
+            <div class="prices-card-checkbox"><input type="checkbox" checked class="prices-card-checkbox__checkbox"
+                name="tv" id="tv"><label for="tv">ТВ + 100 ₽ (пакет
+                “Базовый”)</label></div>
+            <div class="prices-card-prices"> <span class="prices-card__price">399 ₽ </span>
+              <span class="prices-card__period">в месяц</span></div>
+            <span class="prices-card__star">*итоговая цена зависит от варианта оплаты и пакета ТВ при необходимости
+            </span>
+            <button class="button prices-card__button">Выбрать тариф</button>
+          </div>
+          <!-- /.prices-card -->
+          <div class="prices-card">
+            <h3 class="prices-card__title">Резвый клик</h3>
+            <span class="prices-card__subtitle">Скорость интернета</span>
+            <span class="prices-card__speed">80-100 Мбит/с</span>
+            <p class="prices-card__description">Отличный вариант для всей семьи. Общайтесь в соцсетях и смотрите любимые
+              фильмы и сериалы!
+            </p>
+            <div class="prices-card-checkbox"><input type="checkbox" class="prices-card-checkbox__checkbox" name="tv1"
+                id="tv1"><label for="tv1">ТВ + 100 ₽ (пакет
+                “Базовый”)</label></div>
+            <div class="prices-card-prices"><span class="prices-card__price">449 ₽ </span>
+              <span class="prices-card__period">в месяц</span></div>
+            <span class="prices-card__star">*итоговая цена зависит от варианта оплаты и пакета ТВ при необходимости
+            </span>
+            <button class="button-blue prices-card__button">Тариф выбран</button>
+          </div>
+          <!-- /.prices-card -->
+          <div class="prices-card">
+            <h3 class="prices-card__title">Турбо клик</h3>
+            <span class="prices-card__subtitle">Скорость интернета</span>
+            <span class="prices-card__speed">до 100 Мбит/с</span>
+            <p class="prices-card__description">Отличный вариант для пенсионеров, выполнения определенных задач и работе
+              с файлами различных размеров.</p>
+            <div class="prices-card-checkbox"><input type="checkbox" class="prices-card-checkbox__checkbox" name="tv2"
+                id="tv2"><label for="tv2">ТВ + 100 ₽ (пакет
+                “Базовый”)</label></div>
+            <div class="prices-card-prices"><span class="prices-card__price">549 ₽ </span>
+              <span class="prices-card__period">в месяц</span></div>
+            <span class="prices-card__star">*итоговая цена зависит от варианта оплаты и пакета ТВ при необходимости
+            </span>
+            <button class="button prices-card__button">Выбрать тариф</button>
+          </div>
+          <!-- /.prices-card -->
 
+        </div>
+        <!-- /.owl-carousel -->
+      </div>
+      <!-- /.container prices-container -->
+    </section>
+    <!-- /.prices -->
 
   </main>
   <footer class="footer">
@@ -54,6 +117,8 @@
     <!-- /.container footer-container -->
   </footer>
   <!-- /.footer -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
   <script src="js/js.js"></script>
 </body>
 
