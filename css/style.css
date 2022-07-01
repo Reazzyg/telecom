@@ -1,25 +1,26 @@
 @font-face {
-  font-family: 'Lato-Regular';
-  src: url("../fonts/latoregular.woff") format("woff"), url("../fonts/latoregular.woff2") format("woff2");
-  font-weight: normal;
+  font-family: 'Cera-Black';
+  src: url("../fonts/CeraRoundPro-Black.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Lato-Medium';
-  src: url("../fonts/latomedium.woff") format("woff"), url("../fonts/latomedium.woff2") format("woff2");
-  font-weight: 500;
+  font-family: 'Cera-Bold';
+  src: url("../fonts/CeraRoundPro-Bold.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Lato-SemiBold';
-  src: url("../fonts/latosemibold.woff") format("woff"), url("../fonts/latosemibold.woff2") format("woff2");
-  font-weight: 600;
+  font-family: 'Cera-Regular';
+  src: url("../fonts/CeraRoundPro-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Lato-Bold';
-  src: url("../fonts/latobold.woff") format("woff"), url("../fonts/latobold.woff2") format("woff2");
-  font-weight: 800;
+  font-family: 'Cera-Medium';
+  src: url("../fonts/CeraRoundPro-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Cera-Light';
+  src: url("../fonts/CeraRoundPro-Light.woff") format("woff");
 }
 
 * {
@@ -42,4 +43,119 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .container {
   max-width: 1180px;
   margin: auto;
+}
+
+.button {
+  padding: 12px 61.5px;
+  background-color: #C81059;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: #fff;
+  width: fit-content;
+  font-family: "Cera-Light ", sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+.header {
+  padding: 22px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hero {
+  background-color: #F2F6F8;
+  position: relative;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-description {
+  padding: 88px 0;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.hero-description__title {
+  font-family: "Cera-Bold", sans-serif;
+  color: #2D2D2D;
+  font-size: 30px;
+  margin-bottom: 10px;
+  line-height: 150%;
+}
+
+.hero-description-list {
+  list-style: disc;
+  margin-bottom: 30px;
+  padding-left: 25px;
+}
+
+.hero-description-list__item {
+  font-family: "Cera-Light ", sans-serif;
+  color: #555555;
+  font-size: 16px;
+  line-height: 200%;
+}
+
+.hero__img {
+  width: 436px;
+  height: 314px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 576px;
+  }
+  .hero-container {
+    flex-direction: column;
+  }
+  .hero-description {
+    width: 100%;
+  }
+  .hero-description__title {
+    font-size: 20px;
+  }
+  .hero-description-list__item {
+    font-size: 14px;
+  }
+  .hero__img {
+    order: -1;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 92%;
+  }
+  .hero__img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 440px) {
+  .hero-description__button {
+    width: 100%;
+  }
 }
