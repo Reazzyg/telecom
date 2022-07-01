@@ -1,5 +1,89 @@
 .header
   padding: 22px 0
+  position: fixed
+  right: 0
+  top: 0
+  left: 0
+  z-index: 99
+  background-color: #fff
   &-container
     display: flex
     justify-content: flex-start
+    align-items: center
+  &-menu
+    &-button
+      position: relative
+      width: 16px
+      height: 10px
+      border: none
+      outline: none
+      background-color: transparent
+      cursor: pointer
+      display: none
+      &__line
+        position: absolute
+        left: 0
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        height: 2px
+        background-color: $title
+        &:before
+          content: ''
+          position: absolute
+          right: 0
+          left: 0
+          top: 0
+          height: 2px
+          background-color: $title
+          transform: translateY(-50%)
+        &:after
+          content: ''
+          position: absolute
+          right: 0
+          left: 0
+          bottom: 0
+          height: 2px
+          background-color: $title
+          transform: translateY(50%)
+      &-close
+        &:before
+          content: ''
+          position: absolute
+          right: 0
+          left: 0
+          top: 0
+          height: 2px
+          background-color: $title
+          transform: rotate(45deg )
+
+    &-mobile
+
+      &-list
+        padding: 20px 0 20px
+        position: fixed
+        right: 0
+        top: -500px
+        left: 0
+        z-index: 99
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        background-color: #fff
+        border-bottom-right-radius: 2.5rem
+        border-bottom-left-radius: 2.5rem
+        transition: top .3s
+
+        &-active
+          top: 80px
+        &-item
+          margin-bottom: 10px
+          &:nth-last-child(1)
+            margin-bottom: 0
+          &__link
+            font-family: $light
+            font-size: 14px
+            color: $text
+.header-menu-button-close .header-menu-button__line
+  transform: rotate(135deg ) translateX(-50%)

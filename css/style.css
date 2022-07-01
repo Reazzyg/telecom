@@ -27,6 +27,10 @@
   box-sizing: border-box;
 }
 
+body {
+  position: relative;
+}
+
 a {
   text-decoration: none;
 }
@@ -138,16 +142,117 @@ input[type="checkbox"]:checked + label:after {
 
 .header {
   padding: 22px 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: #fff;
 }
 
 .header-container {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
+}
+
+.header-menu-button {
+  position: relative;
+  width: 16px;
+  height: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.header-menu-button__line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  background-color: #2D2D2D;
+}
+
+.header-menu-button__line:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 2px;
+  background-color: #2D2D2D;
+  transform: translateY(-50%);
+}
+
+.header-menu-button__line:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #2D2D2D;
+  transform: translateY(50%);
+}
+
+.header-menu-button-close:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 2px;
+  background-color: #2D2D2D;
+  transform: rotate(45deg);
+}
+
+.header-menu-mobile-list {
+  padding: 20px 0 20px;
+  position: fixed;
+  right: 0;
+  top: -500px;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-bottom-right-radius: 2.5rem;
+  border-bottom-left-radius: 2.5rem;
+  transition: top .3s;
+}
+
+.header-menu-mobile-list-active {
+  top: 80px;
+}
+
+.header-menu-mobile-list-item {
+  margin-bottom: 10px;
+}
+
+.header-menu-mobile-list-item:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+.header-menu-mobile-list-item__link {
+  font-family: "Cera-Light ", sans-serif;
+  font-size: 14px;
+  color: #555555;
+}
+
+.header-menu-button-close .header-menu-button__line {
+  transform: rotate(135deg) translateX(-50%);
 }
 
 .hero {
   background-color: #F2F6F8;
   position: relative;
+  padding-top: 85px;
 }
 
 .hero-container {
@@ -414,6 +519,12 @@ input[type="checkbox"]:checked + label:after {
 @media (max-width: 768px) {
   .container {
     max-width: 576px;
+  }
+  .header-container {
+    justify-content: space-between;
+  }
+  .header-menu-button {
+    display: block;
   }
   .hero-container {
     flex-direction: column;
