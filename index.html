@@ -20,7 +20,7 @@
     <div class="container header-container">
 
       <a href="#"> <img src="img/logo.svg" alt="" class="header-logo"></a>
-
+      .button.header-menu__button
     </div>
     <!-- /.container -->
   </header>
@@ -108,11 +108,43 @@
       <!-- /.container prices-container -->
     </section>
     <!-- /.prices -->
-
+    <section class="connect">
+      <div class="container connect-container">
+        <h2 class="connect__title">Подключиться просто!</h2>
+        <form action="" class="connect-form">
+          <div class="connect-form-wrapper">
+            <span class="connect-form__choice">Интернет</span>
+            <span class="connect-form__choice">Интернет + ТВ</span>
+            <span class="connect-form__choice">Телефония</span>
+            <span class="connect-form__choice">Видеонаблюдение</span>
+          </div>
+          <div class="connect-form-wrapper">
+            <input type="text" placeholder="Имя" class="connect-form__input">
+            <input type="text" placeholder="Номер телефона" class="connect-form__input">
+            <button type="submit" class="button connect-form__button">Отправить</button>
+          </div>
+          <div class="connect-form-checkbox">
+            <input type="checkbox" checked name="agree" id="agree"><label for="agree">Я соглашаюсь на условия <a
+                class="connect-form-checkbox__link" href="https://k-telecom.org/politika-konfidentsialnosti/">обработки
+                данных</a> </label></div>
+        </form>
+      </div>
+      <!-- /.container connect-container -->
+    </section>
+    <!-- /.connect -->
   </main>
   <footer class="footer">
     <div class="container footer-container">
-
+      <div class="footer-left">
+        <a href="#" class="footer-link"><img src="img/logo.svg" alt="" class="footer-link__img"></a>
+        <span class="footer-legacy">© 2018–2022 ООО «К-Телеком»</span>
+      </div>
+      <div class="footer-socials">
+        <a href="#" class="footer-socials-link"><img src="img/inst.svg" alt="" class="footer-socials-link__img"></a>
+        <a href="#" class="footer-socials-link"><img src="img/yt.svg" alt="" class="footer-socials-link__img"></a>
+        <a href="#" class="footer-socials-link"><img src="img/vk.svg" alt="" class="footer-socials-link__img"></a>
+      </div>
+      <!-- /.footer-socials -->
     </div>
     <!-- /.container footer-container -->
   </footer>
