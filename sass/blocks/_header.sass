@@ -28,34 +28,24 @@
         transform: translateY(-50%)
         height: 2px
         background-color: $title
-        &:before
-          content: ''
-          position: absolute
-          right: 0
-          left: 0
-          top: 0
-          height: 2px
-          background-color: $title
-          transform: translateY(-50%)
-        &:after
-          content: ''
-          position: absolute
-          right: 0
-          left: 0
-          bottom: 0
-          height: 2px
-          background-color: $title
-          transform: translateY(50%)
-      &-close
-        &:before
-          content: ''
-          position: absolute
-          right: 0
-          left: 0
-          top: 0
-          height: 2px
-          background-color: $title
-          transform: rotate(45deg )
+      &:before
+        content: ''
+        position: absolute
+        right: 0
+        left: 0
+        top: 0
+        height: 2px
+        background-color: $title
+        transform: translateY(-50%)
+      &:after
+        content: ''
+        position: absolute
+        right: 0
+        left: 0
+        bottom: 0
+        height: 2px
+        background-color: $title
+        transform: translateY(50%)
 
     &-mobile
 
@@ -86,4 +76,4 @@
             font-size: 14px
             color: $text
 .header-menu-button-close .header-menu-button__line
-  transform: rotate(135deg ) translateX(-50%)
+  transform: rotate(135deg ) translateX()
