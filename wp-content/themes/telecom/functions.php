@@ -23,3 +23,9 @@ function telecom_scripts(){
 }
 
 add_filter( 'show_admin_bar', '__return_false' );
+//
+function form_shortcode( $atts ){
+	echo('');
+}
+ 
+add_shortcode( 'form', 'form_shortcode' );

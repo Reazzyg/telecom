@@ -87,25 +87,22 @@
   <!-- /.prices -->
   <section class="connect">
     <div class="container connect-container">
+
       <h2 class="connect__title">Подключиться просто!</h2>
-      <form action="" class="connect-form">
+      <div action="" class="connect-form">
         <div class="connect-form-wrapper">
           <span class="connect-form__choice">Интернет</span>
           <span class="connect-form__choice">Интернет + ТВ</span>
           <span class="connect-form__choice">Телефония</span>
           <span class="connect-form__choice">Видеонаблюдение</span>
         </div>
+
         <div class="connect-form-wrapper">
-          <input type="text" placeholder="Имя" class="connect-form__input">
-          <input type="text" placeholder="Номер телефона" class="connect-form__input">
-          <button type="submit" class="button connect-form__button">Отправить</button>
+          <?php echo do_shortcode( '[contact-form-7 id="14" title="форма связи"]' ); ?>
+
         </div>
-        <div class="connect-form-checkbox">
-          <input type="checkbox" checked name="agree" id="agree"><label for="agree">Я соглашаюсь на условия <a
-              class="connect-form-checkbox__link" href="https://k-telecom.org/politika-konfidentsialnosti/">обработки
-              данных</a> </label>
-        </div>
-      </form>
+
+      </div>
     </div>
     <!-- /.container connect-container -->
   </section>
